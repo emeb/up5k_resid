@@ -1,0 +1,64 @@
+[*]
+[*] GTKWave Analyzer v3.3.108 (w)1999-2020 BSI
+[*] Sat Sep 11 22:21:04 2021
+[*]
+[dumpfile] "/home/ericb/KBADC/lattice/up5k_resid/icarus/tb_i2s.vcd"
+[dumpfile_mtime] "Sat Sep 11 22:14:47 2021"
+[dumpfile_size] 1089488
+[savefile] "/home/ericb/KBADC/lattice/up5k_resid/icarus/tb_i2s.gtkw"
+[timestart] 3920
+[size] 1506 600
+[pos] -1 -1
+*-11.575460 14385 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] tb_i2s.
+[sst_width] 271
+[signals_width] 182
+[sst_expanded] 1
+[sst_vpaned_height] 156
+@200
+-Top
+@28
+tb_i2s.clk
+tb_i2s.reset
+tb_i2s.cnt[1:0]
+@22
+tb_i2s.bits[5:0]
+@28
+tb_i2s.i2s_sclk
+tb_i2s.i2s_lrclk
+tb_i2s.i2s_din
+tb_i2s.i2s_dout
+@29
+tb_i2s.i2s_sampled
+@22
+tb_i2s.IN_L[15:0]
+tb_i2s.IN_R[15:0]
+tb_i2s.OUT_L[15:0]
+tb_i2s.OUT_R[15:0]
+@200
+-UUT
+@28
+tb_i2s.uut.CLK
+@22
+tb_i2s.uut.IN_L[15:0]
+tb_i2s.uut.IN_R[15:0]
+tb_i2s.uut.OUT_L[15:0]
+tb_i2s.uut.OUT_R[15:0]
+tb_i2s.uut.bcnt[5:0]
+tb_i2s.uut.data[15:0]
+@28
+tb_i2s.uut.i2s_din
+tb_i2s.uut.i2s_dout
+tb_i2s.uut.i2s_lrclk
+tb_i2s.uut.i2s_lrclk_sync[1:0]
+tb_i2s.uut.i2s_sampled
+tb_i2s.uut.i2s_sclk
+tb_i2s.uut.i2s_sclk_fall
+tb_i2s.uut.i2s_sclk_rise
+tb_i2s.uut.i2s_sclk_sync[1:0]
+@22
+tb_i2s.uut.rx[15:0]
+@28
+tb_i2s.uut.w
+[pattern_trace] 1
+[pattern_trace] 0

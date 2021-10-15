@@ -1,0 +1,72 @@
+// Power supply config
+   // Make sure to switch back to not use the PLL or powering
+   // it down will lockup the chip
+00 02 00 00
+
+   // Power down all digital blocks during setup
+00 04 00 08
+
+   // Disable VDD startup regulator (provided externally)
+00 30 40 60
+
+   // Set charge pump to use VDDIO rail
+00 26 00 6C
+
+// Bias
+   // VAG=1.5V, bias current -25%, slow ramp
+00 28 01 CB
+
+   //Line Out bias current=0.36mA, voltage=1.65V
+00 2C 03 22
+
+// Other analog blocks
+   // Enable short detect mode for headphone L/R and center channel. Set short detect current trip level to 75mA.
+00 3C 11 06
+
+   // Enable zero-cross detect for HP_OUT and ADC
+00 24 01 33
+
+// Power up in/out/digital
+	// Power up LINEOUT, HP, ADC, DAC (analog)
+00 30 40 FF
+
+	// Power up I2S_IN, I2S_OUT, DAP, DAC, ADC (digital)
+00 02 00 73
+
+// Line out config
+	// Set volume
+00 2e 05 05
+
+// PLL Setup
+00 30 45 FF	// Power up PLL and its VCO
+00 34 00 08	// Divide the input frequency by 2 (SYS_MCLK > 17MHz)
+//00 32 83 12	// 96kHz - int_div=16, frac_div=786
+00 32 60 00	// 23.44kHz - int_div=12, frac_div=0
+
+// Rate config
+//00 04 00 0F	// Rate=96kHz, Use PLL
+00 04 00 03	// Rate=32kHz, Use PLL
+
+// Format
+00 06 00 90		// I2S master mode, 24 bits
+
+// Input / Output routing
+00 0a 00 70 // Route I2S_DIN to DAP, route DAP to DAC, route ADC to I2S_DOUT
+//00 0a 00 50 // Route I2S_IN to DAP, route I2S_IN to DAC
+//00 0a 00 40 // Route I2S_IN to DAP, route ADC to DAC
+
+// DAP EQ
+01 00 00 01 // Enable DAP
+//01 08 00 03 // Enable 5 band GEQ
+//01 16 00 4f // 9.5dB gain at 115Hz
+//01 18 00 3B // 3dB gain at 330Hz
+
+
+//00 22 00 00 // 12dB volume boost
+00 22 18 18 // 0dB volume boost
+00 24 00 26 // line in, zero crossing, unmute ADC
+00 10 3c 3c // 0dB DAC Volume
+00 0e 02 00 // Enable volume ramp
+
+// End sequence
+ff
